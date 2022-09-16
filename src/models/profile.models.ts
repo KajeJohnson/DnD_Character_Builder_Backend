@@ -1,14 +1,14 @@
 import { model, Schema } from "mongoose";
-import { Profile } from "../types/profile.types";
+import { Character } from "../types/character.types";
 
-const profileSchema = new Schema<Profile>(
+const characterSchema = new Schema<Character>(
   {
     userId: { type: String, required: true },
-    profileUsername: { type: String, required: true, unique: true },
-    profileName: { type: String, required: true },
-    profileDescription: { type: String },
+    characterUsername: { type: String, required: true, unique: true },
+    characterName: { type: String, required: true },
+    characterDescription: { type: String },
   },
   { timestamps: true }
 );
 
-export const profileModel = model<Profile>("Profile", profileSchema);
+export const characterModel = model<Character>("Character", characterSchema);
