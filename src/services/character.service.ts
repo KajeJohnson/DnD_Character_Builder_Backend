@@ -1,4 +1,4 @@
-import { profileModel } from "../models/profile.models";
+import { characterModel } from "../models/character.models";
 import { Character } from "../types/character.types";
 
 async function getCharacters() {
@@ -15,7 +15,7 @@ async function getUserCharacters(userId: string) {
 }
 
 async function getCharacter(id: string) {
-  const charater = await characterModel.findById(id).lean();
+  const character = await characterModel.findById(id).lean();
   return character;
 }
 
