@@ -19,9 +19,9 @@ app.use("/characters", characterRouter);
 app.use("/links", linkRouter);
 
 mongoose
-  .connect(config.mongoUri)
-  .then(() => console.log("Connected to MongoDB"));
+	.connect(config.mongoUri)
+	.then(() => console.log("Connected to MongoDB"));
 
-const port = config.port;
+const port = config.port || 8000;
 
 app.listen(port, () => console.log(`Listening on port: ${port}.`));
