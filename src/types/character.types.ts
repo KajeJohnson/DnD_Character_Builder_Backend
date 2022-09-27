@@ -1,13 +1,23 @@
+import { Alignment } from "./characterOptions/alignments.types";
+import { Class } from "./characterOptions/classes.types";
+import { EquipmentType } from "./characterOptions/equipment.types";
+import { Feature } from "./characterOptions/features.types";
+import { Language } from "./characterOptions/languages.types";
+import { Proficiency } from "./characterOptions/proficiencies.types";
+import { Race } from "./characterOptions/race.types";
+import { Spell } from "./characterOptions/spells.types";
+import { Trait } from "./characterOptions/traits.types";
+
 export interface Character {
   _id?: string;
   userId?: string;
   characterName: string;
   createdAt?: string;
   updatedAt?: string;
-  class: string;
+  class: Class;
   level: number;
-  race: string;
-  alignment: string;
+  race: Race;
+  alignment: Alignment;
   strength: number;
   dexterity: number;
   constitution: number;
@@ -18,10 +28,10 @@ export interface Character {
   armorClass: number;
   speed: string;
   hitPoints: number;
-  spells: string[];
-  proficiencies: string[];
-  languages: string[];
-  equipment: string[];
-  features: string[];
-  traits: string[];
+  spells: Spell[];
+  proficiencies: Proficiency[];
+  languages: Language[];
+  equipment: EquipmentType[];
+  features: Feature[];
+  traits: Trait[];
 }
