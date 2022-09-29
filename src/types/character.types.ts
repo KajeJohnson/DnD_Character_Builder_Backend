@@ -14,7 +14,7 @@ export interface Character {
   characterName: string;
   createdAt?: string;
   updatedAt?: string;
-  class: Class;
+  characterClass: Class;
   level: number;
   race: Race;
   alignment: Alignment;

@@ -13,7 +13,7 @@ const characterSchema = new Schema<Character>(
     characterName: { type: String, required: false },
     createdAt: { type: String, required: false },
     updatedAt: { type: String, required: false },
-    class: { type: Object, required: false },
+    characterClass: { type: Object, required: false },
     level: { type: Number, required: false },
     race: { type: Object, required: false },
     alignment: { type: Object, required: false },
